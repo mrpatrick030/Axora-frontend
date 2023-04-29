@@ -1,27 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@keyframes navbarAnimation{0%{transform:translate3D(0,10%,0)} 100%{transform:translate3D(0,-10%,0)}}
+@keyframes logoAnimation{0%{transform:scale3d(0.95,0.95,0.95)} 50%{transform:scale3d(1.05,1.05,1.05)} 61%{transform:translate3d(5%,0,0)} 100%{transform:translate3d(-5%,0,0)}}
+@keyframes welcomeAnimation{0%{opacity:0;} 25%{opacity:0.1;}  50%{opacity:0.5} 100%{opacity:1;}}
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+body{background-image:linear-gradient(90deg, #ddd, #fff); font-family: Georgia, 'Times New Roman', Times, serif;}
+#headeranchors{transition:1s ease-in-out; color:#eee}
+#headeranchors:hover{color:#d7b679;animation:navbarAnimation 1s alternate infinite }
+#headerbutton:hover{color:#d7b679}
+#headerbutton{transform:scale3d(1.4,1.4,1.4)}
+#logo{transition:2s ease-in-out}
+#logo:hover{animation:logoAnimation 4s alternate infinite}
+#firstsectionbutton{transition:1s ease-in-out;background-image:linear-gradient(90deg, #141722, #141722)}
+#firstsectionbutton:hover{transform:scale3d(0.93,0.93,0.93);background-image:linear-gradient(90deg, #111, #141722, #111);}
+#the{animation: welcomeAnimation 1s linear;}
+#future{animation: welcomeAnimation 2s linear;}
+#decentralized{animation: welcomeAnimation 3s linear;}
+#reserve{animation: welcomeAnimation 4s linear;}
+#currency{animation: welcomeAnimation 5s linear;}
+#intro1{animation: welcomeAnimation 1s linear;}
+#intro2{animation: welcomeAnimation 2s linear;}
+#intro3{animation: welcomeAnimation 3s linear;}
+#participateButton:hover{transform:scale3d(0.95,0.95,0.95)}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
