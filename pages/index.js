@@ -3,6 +3,7 @@ import ProjectHeader from '../components/header';
 import SecondSection from '@/components/secondsection';
 import Participate from '@/components/participate';
 import FAQ from '../components/faq';
+import Footer from '@/components/footer';
 
 
 export default function Home(){
@@ -14,7 +15,7 @@ export default function Home(){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/svg-with-js.min.css" />;
     </Head>
   <div id="allTheComponents" style={{fontFamily:"georgia"}}>
-  <div className='' style={{backgroundImage:"url(../images/bitcoin1.jpg)", 
+  <div className='' style={{backgroundImage:"url(../images/laptop.jpg)", 
   paddingBottom:"20%", backgroundPositionX:"", backgroundPositionY:"", backgroundSize:""}}>
   <ProjectHeader />
   <div style={{fontSize:"300%", fontWeight:"600", color:"#fff", marginTop:"5%", marginLeft:"5%", marginBottom:"2%"}}><span id="the">The </span> 
@@ -28,6 +29,7 @@ export default function Home(){
   <SecondSection />
   <Participate />
   <FAQ />
+  <Footer />
   </div>
   </>
   );

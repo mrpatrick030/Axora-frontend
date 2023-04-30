@@ -86,7 +86,7 @@ export default function ProjectHeader(){
 
             <button>
             <a href='/' id="firstsectionbutton" className='lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-full text-white items-center justify-center'>
-              Enter App
+              Enter App &nbsp;<i class="fa-solid fa-arrow-right" style={{color:"#ddd",}}></i>
             </a>
             </button>
 
