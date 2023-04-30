@@ -5,7 +5,7 @@
 @keyframes logoAnimation{0%{transform:scale3d(0.95,0.95,0.95)} 50%{transform:scale3d(1.05,1.05,1.05)} 61%{transform:translate3d(5%,0,0)} 100%{transform:translate3d(-5%,0,0)}}
 @keyframes welcomeAnimation{0%{opacity:0;} 25%{opacity:0.1;}  50%{opacity:0.5} 100%{opacity:1;}}
 
-body{background-image:linear-gradient(90deg, #ddd, #fff); font-family: Georgia, 'Times New Roman', Times, serif;}
+body{background-image:linear-gradient(90deg, #ccc, #ccc); font-family: Georgia, 'Times New Roman', Times, serif;}
 #headeranchors{transition:1s ease-in-out; color:#eee}
 #headeranchors:hover{color:#d7b679;animation:navbarAnimation 1s alternate infinite }
 #headerbutton:hover{color:#d7b679}

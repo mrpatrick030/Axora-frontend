@@ -1,6 +1,6 @@
 export default function SecondSection() {
     return(
-        <div className="ml-6 mr-6 rounded-3xl" style={{marginLeft:"5%", marginRight:"5%", border:"1px solid #333", color:"#141722", marginTop:"-5%", paddingTop:"7%", paddingBottom:"7%",marginBottom:"8%", background:"#eee"}}>
+        <div className="ml-6 mr-6 rounded-3xl" style={{marginLeft:"5%", marginRight:"5%", border:"1px solid #333", color:"#141722", marginTop:"-5%", paddingTop:"7%", paddingBottom:"7%",marginBottom:"8%", background:"#bbb"}}>
          <div className="grid md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1" style={{paddingLeft:"5%", paddingRight:"5%", marginBottom:"12%"}}>
           <div className="grid-cols-1" style={{fontSize:"250%"}}>Protocol <br></br> Stats</div>
           <div className="grid-cols-1" style={{fontSize:"140%"}}>Treasury Balance <br></br>

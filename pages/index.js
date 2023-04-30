@@ -2,6 +2,7 @@ import Head from 'next/head';
 import ProjectHeader from '../components/header';
 import SecondSection from '@/components/secondsection';
 import Participate from '@/components/participate';
+import FAQ from '../components/faq';
 
 
 export default function Home(){
@@ -9,6 +10,8 @@ export default function Home(){
     <>
     <Head>
    <title>The official website of Axora-Labs</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />;
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/svg-with-js.min.css" />;
     </Head>
   <div id="allTheComponents" style={{fontFamily:"georgia"}}>
   <div className='' style={{backgroundImage:"url(../images/bitcoin1.jpg)", 
@@ -21,9 +24,10 @@ export default function Home(){
    <span id="intro2"> a community-owned, decentralized and censorship-resistant 
     reserve currency </span> <span id="intro3"> that is asset-backed, deeply liquid and used widely across Web3.</span></div>
     </div>
-  </div>
+    </div>
   <SecondSection />
   <Participate />
+  <FAQ />
   </div>
   </>
   );
