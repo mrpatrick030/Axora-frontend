@@ -1,6 +1,17 @@
+import Head from 'next/head';
+import {useEffect} from "react";
+
 export default function SecondSection() {
+    useEffect(() => {
+        AOS.init();
+      }, [])
     return(
-        <div className="ml-6 mr-6 rounded-3xl" style={{marginLeft:"5%", marginRight:"5%", border:"1px solid #333", boxShadow:"2px 2px 10px 2px #222", color:"#141722", marginTop:"-5%", paddingTop:"7%", paddingBottom:"7%",marginBottom:"8%", background:"#bbb"}}>
+        <>
+        <Head>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        </Head>
+        <div className="ml-6 mr-6 rounded-3xl" data-aos="slide-up" style={{marginLeft:"5%", marginRight:"5%", transition:"1s ease-in-out", border:"1px solid #333", boxShadow:"2px 2px 10px 2px #222", color:"#141722", marginTop:"-5%", paddingTop:"7%", paddingBottom:"7%",marginBottom:"8%", background:"#bbb"}}>
          <div className="grid md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1" style={{paddingLeft:"5%", paddingRight:"5%", marginBottom:"12%"}}>
           <div className="grid-cols-1" style={{fontSize:"250%"}}>Protocol <br></br> Stats</div>
           <div className="grid-cols-1" style={{fontSize:"140%"}}>Treasury Balance <br></br>
@@ -17,5 +28,6 @@ export default function SecondSection() {
            <span style={{fontSize:"250%",}}>50+ </span></div>
           </div>  
        </div>
+       </>
     );
 }

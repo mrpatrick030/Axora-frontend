@@ -14,7 +14,7 @@ export default function Footer(){
           Bonds <br></br>
         </div>
        <div className="grid-cols-1" style={{marginBottom:"5%"}}>
-       <div style={{marginBottom:"3%", fontWeight:"bold"}}>Learn &nbsp; <i class="fa-solid fa-graduation-cap"></i></div>
+       <div style={{marginBottom:"3%", fontWeight:"bold"}}>Learn &nbsp; <i class="fa-solid fa-bookmark"></i></div>
        Documentation<br></br>
        Blog<br></br>
        Medium <br></br>

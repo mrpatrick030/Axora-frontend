@@ -47,7 +47,7 @@ export default function ProjectHeader(){
         style={{fontSize:"115%", transition:"2s ease-in-out"}}>
            
             <div>
-            <a href='/' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'
+            <a href='/stake' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'
              >
               Stake
             </a>

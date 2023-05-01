@@ -4,15 +4,20 @@ import SecondSection from '@/components/secondsection';
 import Participate from '@/components/participate';
 import FAQ from '../components/faq';
 import Footer from '@/components/footer';
-
+import {useEffect} from "react";
 
 export default function Home(){
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <>
     <Head>
    <title>The official website of Axora-Labs</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />;
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/svg-with-js.min.css" />;
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </Head>
   <div id="allTheComponents" style={{fontFamily:"georgia"}}>
   <div className='' style={{backgroundImage:"url(../images/laptop.jpg)", 
