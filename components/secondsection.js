@@ -21,7 +21,7 @@ export default function SecondSection() {
           </div>  
 
           <div className="grid md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1" style={{paddingLeft:"5%", paddingRight:"5%",}}>
-          <div className="grid-cols-1" style={{fontSize:"250%"}}><img className="sm:opacity-0 md:opacity-100 lg:opacity-100" src="../images/bnb8.png" style={{marginLeft:"-60%", marginTop:"-30%"}} /></div>
+          <div className="grid-cols-1" style={{fontSize:"250%"}}><img id="SecondSectionImage" className="sm:opacity-0 md:opacity-100 lg:opacity-100" src="../images/bnb8.png" style={{marginLeft:"-60%", marginTop:"-30%", animation:"secondSectionImageAnimation 10s linear infinite"}} /></div>
           <div className="grid-cols-1" style={{fontSize:"140%"}}>Protocol-Owned Liquidity <br></br>
            <span style={{fontSize:"250%",}}>$62,489,711 </span></div>
            <div className="grid-cols-1" style={{fontSize:"140%"}}>Unique Tokens in Treasury <br></br>
