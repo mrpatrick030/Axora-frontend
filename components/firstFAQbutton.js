@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 
 export default function FirstFAQ(){
 const [toggle, setToggle] = useState(true);
-const handleClick = () => {
+async function handleClick() {
     setToggle(!toggle)
   };
     if (toggle){
