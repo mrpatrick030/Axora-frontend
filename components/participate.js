@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import {useEffect} from "react";
+import Link from 'next/link';
 
 export default function Participate() {
     useEffect(() => {
@@ -24,7 +25,7 @@ export default function Participate() {
         <div style={{fontSize:"110%"}}>Stakers play an important role in the Axora-labs ecosystem. Stakers deposit their Axora into the protocol, 
             which contributes to Axora's long-term price stability. 
             In exchange, stakers receive their pro rata share of rebases and governance rights.</div>
-            <button className="px-7 py-2 rounded-full" id="participateButton" style={{marginTop:"5%", border:"2px solid #ddd", fontSize:"110%", transition:"1s ease-in-out"}}>STAKE &nbsp;<i class="fa-solid fa-arrow-right" style={{color:"#ddd",}}></i></button>
+            <Link href={"./stake"}> <button className="px-7 py-2 rounded-full" id="participateButton" style={{marginTop:"5%", border:"2px solid #ddd", fontSize:"110%", transition:"1s ease-in-out"}}>STAKE &nbsp;<i class="fa-solid fa-arrow-right" style={{color:"#ddd",}}></i></button></Link>
     </div>
     <div className="grid-cols-1 rounded-r-3xl rounded-l-3xl lg:rounded-l-none md:rounded-l-none" data-aos="zoom-in" style={{padding:"10%", backgroundColor:"#d7b679", marginBottom:"5%", color:"#222", transition:"1s ease-in-out"}}>
     <div className="grid grid-cols-4">
@@ -35,7 +36,7 @@ export default function Participate() {
         <div style={{fontSize:"110%"}}>Bonding allows you to trade various tokens for Axora at a discounted price. 
         In exchange, bond sales provide additional liquidity and reserve assets to the Axora-labs treasury, 
         contributing to the stability of the protocol. As a result, 99% of all liquidity is owned by Axora-labs.</div>
-        <button className="px-7 py-2 rounded-full" id="participateButton" style={{marginTop:"5%", border:"2px solid #222", fontSize:"110%", transition:"1s ease-in-out"}}>BOND &nbsp;<i class="fa-solid fa-arrow-right" style={{color:"#111",}}></i></button>
+        <Link href={"./stake"}><button className="px-7 py-2 rounded-full" id="participateButton" style={{marginTop:"5%", border:"2px solid #222", fontSize:"110%", transition:"1s ease-in-out"}}>BOND &nbsp;<i class="fa-solid fa-arrow-right" style={{color:"#111",}}></i></button></Link>
     </div>
    </div>
   </div>

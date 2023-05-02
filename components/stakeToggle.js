@@ -20,7 +20,7 @@ export default function StakeToggle() {
                 <input type="text" style={{color:"#eee", background:"#141722",outline:"none", fontSize:"130%"}} placeholder='0'></input>
                 <span style={{float:"right", fontSize:"80%", color:"#aaa"}}>Balance: 0.00 gAXORA</span>
                 </div>
-                <div className="rounded-md px-4 py-1" id="stakeConnectWallet" style={{background:"#d7b679", color:"#141722", cursor:"pointer", textAlign:"center", marginTop:"3%"}}><i class="fa fa-check-square"></i>&nbsp;&nbsp; Connect wallet</div>
+                <div className="rounded-md px-4 py-1" id="stakeConnectWallet" style={{background:"#d7b679", color:"#141722", cursor:"pointer", textAlign:"center", marginTop:"3%"}}><i class="fa fa-money"></i>&nbsp;&nbsp; Connect wallet</div>
         </div>
         )
     }
@@ -38,7 +38,7 @@ export default function StakeToggle() {
             <input type="text" style={{color:"#eee", background:"#141722",outline:"none", fontSize:"130%"}} placeholder='0.00'></input>
             <span style={{float:"right", fontSize:"90%", color:"#aaa"}}>Balance: 0.00 AXORA</span>
             </div>
-            <div className="rounded-md px-4 py-1" id="stakeConnectWallet" style={{background:"#d7b679", color:"#141722", cursor:"pointer", textAlign:"center", marginTop:"3%"}}><i class="fa fa-check-square"></i>&nbsp;&nbsp; Connect wallet</div>
+            <div className="rounded-md px-4 py-1" id="stakeConnectWallet" style={{background:"#d7b679", color:"#141722", cursor:"pointer", textAlign:"center", marginTop:"3%"}}><i class="fa fa-money"></i>&nbsp;&nbsp; Connect wallet</div>
     </div>
     }
 }

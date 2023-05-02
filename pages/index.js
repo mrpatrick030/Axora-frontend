@@ -21,7 +21,7 @@ export default function Home(){
     </Head>
   <div id="allTheComponents" style={{fontFamily:"georgia"}}>
   <div className='' style={{backgroundImage:"url(../images/laptop.jpg)", 
-  paddingBottom:"20%", backgroundPositionX:"", backgroundPositionY:"", backgroundSize:""}}>
+  paddingBottom:"20%", backgroundPositionX:"70%", backgroundPositionY:"", backgroundSize:""}}>
   <ProjectHeader />
   <div style={{fontSize:"300%", fontWeight:"600", color:"#fff", marginTop:"5%", marginLeft:"5%", marginBottom:"2%"}}><span id="the">The </span> 
   <span id="future">Future </span><span id="decentralized">Decentralized </span> <span id="reserve">Reserve </span> <span id="currency">Currency </span> </div>

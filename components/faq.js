@@ -15,7 +15,7 @@ return (
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
        </Head>
-    <div style={{marginLeft:"5%", marginRight:"5%", marginBottom:"5%", color:"#141722", transition:"1s ease-in-out"}}>
+    <div style={{marginLeft:"5%", marginRight:"5%", marginBottom:"5%", color:"#141722", transition:"1s ease-in-out",}}>
     <div className="grid md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1">
     <div className="grid-cols-1" data-aos="flip-up" style={{fontSize:"300%", fontWeight:"bold", color:"#141722",}}> FAQ </div>
     <div className="grid-cols-1 col-span-2" style={{marginTop:"10%"}}>  

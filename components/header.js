@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from 'next/link';
 
 export default function ProjectHeader(){
   const [active, setActive] = useState(false);
@@ -9,14 +10,11 @@ export default function ProjectHeader(){
     return (
       <nav className='flex items-center flex-wrap pl-6 pr-6 pb-2 pt-2' style={{background:"rgba(20,20,20,0.3)"}}>
       <div id="logo">
-        <a href='/' className='inline-flex items-center p-2 mr-4 '>
+        <Link href='/' className='inline-flex items-center p-2 mr-4 '>
         <span className='' style={{}}>
-            <img src="../images/bit.png" width="100" height="100" style={{height:""}}/>
+            <img src="../images/axoralogo.png" width="130" height="130" style={{height:""}}/>
           </span>
-          <span className='text-xl text-white font-bold uppercase tracking-wide' style={{fontSize:"130%", color:"#ddd"}}>
-            Axora-Labs
-          </span>
-        </a>
+        </Link>
       </div>
       <button id="headerbutton"
         className=' inline-flex p-3 hover:bg-maroon-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
@@ -43,21 +41,21 @@ export default function ProjectHeader(){
           active ? '' : 'hidden'
         }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
       >
-        <div className='lg:inline-flex gap-4 lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'
+        <div className='lg:inline-flex gap-4 lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center md:items-center items-start  flex flex-col lg:h-auto'
         style={{fontSize:"115%", transition:"2s ease-in-out"}}>
            
             <div>
-            <a href='/stake' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'
+            <Link href='/stake' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'
              >
               Stake
-            </a>
+            </Link>
           </div>
 
           <div>
-            <a href='/' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
+            <Link href='/stake' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
               Bond
           
-          </a>
+          </Link>
           </div>
           
           <div>
@@ -85,9 +83,9 @@ export default function ProjectHeader(){
             </div>
 
             <button>
-            <a href='/' id="firstsectionbutton" className='lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-full text-white items-center justify-center'>
+            <Link href='/stake' id="firstsectionbutton" className='lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-full text-white items-center justify-center'>
               Enter App &nbsp;<i class="fa-solid fa-arrow-right" style={{color:"#ddd",}}></i>
-            </a>
+            </Link>
             </button>
 
         </div>
