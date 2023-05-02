@@ -10,7 +10,13 @@ export default function StakeToggle() {
             <div className=''>
             <div style={{fontSize:"120%", marginBottom:"5%", fontWeight:"bold", textDecoration:"underline",  textAlign:"center", cursor:"pointer"}} onClick={letsSetToggleState}>Stake</div>
             <div className='rounded-2xl p-4' style={{background:"#141722", fontSize:"80%"}}>
-                <button className='px-3 py-1 rounded-md' style={{background:"#2b313d", marginBottom:"3%"}}><i class="fa fa-usd" style={{}}></i> AXORA</button><br></br>
+                <button className='px-3 py-1 rounded-md' style={{background:"#2b313d", marginBottom:"3%"}}><i class="fa fa-usd" style={{}}></i>
+                 <select style={{background:"#2b313d", outline:"none"}}>
+                    <option>AXORA</option>
+                    <option>USDT</option>
+                    <option>DAI</option>
+                </select>
+                 </button><br></br>
                 <input type="text" style={{color:"#eee", background:"#141722",outline:"none", fontSize:"130%"}} placeholder='0'></input>
                 <span style={{float:"right", fontSize:"90%", color:"#aaa"}}>Balance: 0.00 AXORA</span>
                 </div>
