@@ -1,12 +1,45 @@
 import Head from 'next/head';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import StakeToggle from "../components/stakeToggle"
 import Link from 'next/link';
+import { useAccount, useContractReads } from 'wagmi';
+import { liquidstakingcontract } from '@/utils/contractInfo';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ethers } from 'ethers';
 
 export default function Stake(){
+
+  const {address} = useAccount();
+
+  const [contractInfo, setContractInfo] = useState();
+  const [account, setAccount] = useState();
+
+  const {data, isLoading, isError} = useContractReads({
+    contracts: [
+      {
+        ...liquidstakingcontract,
+        functionName: "balanceOf",
+        args: [account]
+      },
+      {
+        ...liquidstakingcontract,
+        functionName: "totalSupply",
+      },
+      {
+        ...liquidstakingcontract,
+        functionName: "name",
+      },
+    ]
+  })
+
+
     useEffect(() => {
         AOS.init();
-      }, [])
+        setContractInfo(data);
+        setAccount(address);
+      }, [data, address])
+
+      
 return(
     <>
     <Head>
@@ -25,7 +58,7 @@ return(
 
         <div className='pl-5 pr-5' style={{marginTop:"3%"}}>
         <span className='' style={{fontSize:"200%", fontWeight:"bold"}}>Stake</span>
-        <span className='float-right'><button className="rounded px-4 py-1" id="stakeConnectWallet" style={{background:"#d7b679", color:"#141722", cursor:"pointer"}}><i class="fa fa-money"></i>&nbsp;&nbsp; Connect wallet</button></span>
+        <span className='float-right'>{<ConnectButton /> ?? <button className="rounded px-4 py-1" id="stakeConnectWallet" style={{background:"#d7b679", color:"#141722", cursor:"pointer"}}><i class="fa fa-money"></i>&nbsp;&nbsp; Connect wallet</button>}</span>
         </div>
 
         <div className='grid md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1' data-aos="zoom-out" style={{marginTop:"3%", transition:"1s ease-in-out"}}>
@@ -34,16 +67,16 @@ return(
             <div className='grid-cols-1'>
             <div className='grid grid-cols-3 gap-3' style={{marginBottom:"5%", textAlign:"center"}}>
                 <div className='grid-cols-1'>
-                <div>Annualized Rebases</div>
-                <div style={{fontSize:"140%", fontWeight:"bold"}}>5.8%</div>
+                <div>Your Staked ETH</div>
+                <div style={{fontSize:"140%", fontWeight:"bold"}}>{contractInfo?.[0]?.toString() / ethers.utils.parseEther("1")}</div>
                 </div>
                 <div className='grid-cols-1'>
-                <div>Time to Next Rebase</div>
-                <div style={{fontSize:"140%", fontWeight:"bold"}}>20 mins</div>
+                <div>Token Name</div>
+                <div style={{fontSize:"140%", fontWeight:"bold"}}>{contractInfo?.[2]}</div>
                 </div>
                 <div className='grid-cols-1'>
-                <div>Current Index</div>
-                <div style={{fontSize:"140%", fontWeight:"bold"}}>332.7 AXORA</div>
+                <div>Total ETH Staked</div>
+                <div style={{fontSize:"140%", fontWeight:"bold"}}>{contractInfo?.[1]?.toString() / ethers.utils.parseEther("1")}</div>
                 </div>
             </div>
 
