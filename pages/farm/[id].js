@@ -6,6 +6,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useRouter } from 'next/router';
 import { useAccount, useContractRead } from 'wagmi';
 import { yieldfarmcontract } from '@/utils/contractInfo';
+import { ethers } from 'ethers';
 
 export default function Farm(){
 
@@ -72,7 +73,7 @@ export default function Farm(){
                 </div>
                 <div className='grid-cols-1'>
                 <div>Your Deposit</div>
-                <div style={{fontSize:"140%", fontWeight:"bold"}}>{userInfo?.amount.toString() ?? 0}</div>
+                <div style={{fontSize:"140%", fontWeight:"bold"}}>{userInfo?.amount.toString() / ethers.utils.parseEther("1") ?? 0}</div>
                 </div>
             </div>
 

@@ -2,7 +2,7 @@ import { testtokencontract, yieldfarmcontract } from "@/utils/contractInfo";
 import { ethers } from "ethers";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { erc20ABI, useAccount, useContractRead, useContractReads, useContractWrite, usePrepareContractWrite } from "wagmi";
+import { erc20ABI, useAccount, useContractRead, useContractReads, useContractWrite, usePrepareContractWrite, useWaitForTransaction } from "wagmi";
 
  const FarmToggle = ({poolId}) => {
 
@@ -49,7 +49,25 @@ import { erc20ABI, useAccount, useContractRead, useContractReads, useContractWri
         args: [PoolId, amount],
     })
 
+    const {config: allowanceConfig} = usePrepareContractWrite({
+        ...testtokencontract,
+        functionName: "approve",
+        args: [yieldfarmcontract.address, amount],
+    })
+
     const {data: depositData, isLoading: depositIsLoading, isError: depositIsError, write: depositWrite} = useContractWrite(config)
+
+    const {data: approveData, isLoading: approveIsLoading, isError: approveIsError, write: approveWrite} = useContractWrite({
+        ...allowanceConfig,
+    })
+
+    const {data: approveHash} = useWaitForTransaction({
+        hash: approveData?.hash,
+        onSuccess() {
+            depositWrite?.();
+        }
+
+    })
 
     useEffect(() => {
         setPoolId(id);
@@ -80,8 +98,8 @@ import { erc20ABI, useAccount, useContractRead, useContractReads, useContractWri
 
                 <div className="rounded-md px-4 py-1" id="stakeConnectWallet" onClick={(e) => {
                     e.preventDefault();
-                    depositWrite?.();
-                }} style={{background:"#d7b679", color:"#141722", cursor:"pointer", textAlign:"center", marginTop:"3%"}}><i class="fa fa-money"></i>&nbsp;&nbsp; Deposit</div>
+                    approveWrite?.();
+                }} style={{background:"#d7b679", color:"#141722", cursor:"pointer", textAlign:"center", marginTop:"3%"}}><i class="fa fa-money"></i>&nbsp;&nbsp; {approveIsLoading ? "Approving..." : "Deposit"}</div>
         </div>
         )
     }
