@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from 'next/link';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function ProjectHeader(){
   const [active, setActive] = useState(false);
@@ -52,41 +53,49 @@ export default function ProjectHeader(){
           </div>
 
           <div>
-            <Link href='/stake' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
-              Bond
+            <Link href='/farm' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
+              Farm
           
           </Link>
           </div>
           
           <div>
-            <a href='/' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
-              Axora-loans
+            <a href='/exchange' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
+              Exchange
             </a>
             </div>
 
             <div>
-            <a href='/' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
-              Axora Pro
+            <a href='/moneymarket' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
+              Money Market
             </a>
             </div>
           
             <div>
-            <a href='/' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
-              Transparency
-            </a>
-            </div>
-
-            <div>
-            <a href='/' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
+            <a href='/governance' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
               Governance
             </a>
             </div>
 
+            <div>
+            <a href='/faucet' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
+              Faucet
+            </a>
+            </div>
+
+            <div>
+            <a href='/admin' id="headeranchors" className='lg:inline-flex lg:w-auto w-full px-4 rounded-full text-white items-center justify-center'>
+              Admin
+            </a>
+            </div>
+
+
+            {<ConnectButton /> ??
             <button>
             <Link href='/stake' id="firstsectionbutton" className='lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-full text-white items-center justify-center'>
               Enter App &nbsp;<i class="fa-solid fa-arrow-right" style={{color:"#ddd",}}></i>
             </Link>
-            </button>
+            </button>}
 
         </div>
       </div>
